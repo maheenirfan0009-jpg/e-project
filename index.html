@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harvel Electronics</title>
+<link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/flatly/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+
+</head>
+
+<body>
+ <nav class="navbar navbar-expand-lg bg-primary fixed-top border-0" data-bs-theme="light">
+    <div class="container-fluid">
+      <a class="navbar-brand rounded " href="index.html">
+        <img src="assets/images/uniquelogo.png" width="155px">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse row mx-0" id="navbar">
+        <div class="col-lg-9 col-md-8">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="About.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Categories
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="Fans.html">Fans</a></li>
+                <li><a class="dropdown-item" href="Gyciers.html">Gyciers</a></li>
+                <li><a class="dropdown-item" href="Bulbs.html">Bulbs</a></li>
+                <li><a class="dropdown-item" href="Switches-buttons.html">Switches+buttons</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Contact-us.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <form class="d-flex" onsubmit="return handleSearch()">
+            <input id="searchInput" class="form-control me-2 border-0" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-light " type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div id="Mainslider" class="carousel slide" data-bs-ride="carousel ">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#Mainslider" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#Mainslider" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#Mainslider" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/images/electric.avif " alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="fw-bold text-black">Have a look</h5>
+          <p class="fw-bold text-black">Some items are here.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/ffff.avif" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="fw-bold text-black">look elecronics</h5>
+          <p class="fw-bold text-black">little bit switches.</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/sssss.avif"
+          alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="fw-bold text-black">look switches</h5>
+          <p class="fw-bold text-black">Some representative placeholder content for the third slide.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#Mainslider" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#Mainslider" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="container ">
+
+    <!-- section most selling card -->
+    <section class="mt-5">
+      <h1 class="text-center">Harvel Most Selling Items</h1>
+      <p class="text-center">Harvel is our one of the best website in the Pakistan.You freely trust our website</p>
+      <div class="row ">
+
+        <div class=" col-md-6 col-lg-3 my-2">
+          <div class=" card border-3 shadow-sm">
+            <img src="assets/images/f1.webp" class="card-img-top">
+            <div class="card-body">
+              <h6>Celling Fan</h6>
+              <p>It help to cool your room temperature</p>
+              <a href="productdetailed.html?productId=Fan1" class="btn btn-sm btn-primary w-50">Details</a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 my-2">
+          <div class="card border-3 shadow-sm" >
+            <img src="assets/images/F2.png" class="card-img-top">
+            <div class="card-body">
+              <h6>Celling Fan</h6>
+              <p>Our best Fan. It help to give fresh air</p>
+              <a href="productdetailed.html?productId=Fan2" class="btn btn-sm btn btn-primary w-50">Details</a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 my-2">
+          <div class="card border-3 shadow-sm">
+            <img src="assets/images/F3.jpg" class="card-img-top">
+            <div class="card-body">
+              <h6>Celling Fan</h6>
+              <p>Most selling item</p>
+              <a href="productdetailed.html?productId=Fan3" class="btn btn-sm btn-primary w-50">Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 my-2">
+          <div class="card border-3 shadow-sm">
+            <img
+              src="assets/images/F4.avif"
+              class="card-img-top">
+            <div class="card-body">
+              <h6>Celling Fans</h6>
+              <p>cheapest price range</p>
+
+              <a href="productdetailed.html?productId=Fan4" class="btn btn-sm btn-primary w-50">Details</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- section favorite items -->
+    <section class="mt-5">
+      <h1 class="text-center">Your Favorite Items</h1>
+      <p class="text-center">Harvel is our one of the best website in the Pakistan.You freely trust our website</p>
+      <div class="row mx-0">
+
+        <div class="col-md-6 col-lg-3 my-2">
+          <div class="card border-3 shadow-sm">
+            <img src="assets/images/bulb.jpg" class="card-img-top">
+            <div class="card-body">
+              <h6>Bulb</h6>
+              <p>To provide among light</p>
+              <a class="btn btn-sm btn-primary w-50" href="productdetailed.html?productId=Bulb1">Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 my-2">
+          <div class="card border-3 shadow-sm">
+            <img src="https://images.pexels.com/photos/269318/pexels-photo-269318.jpeg" class="card-img-top">
+            <div class="card-body">
+              <h6>Bulb</h6>
+              <p>To provide among light</p>
+             <a class="btn btn-sm btn-primary w-50" href="productdetailed.html?productId=Bulb2">Details</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 my-2">
+          <div class="card border-3 shadow-sm">
+            <img src="assets/images/gy.webp" class="card-img-top">
+            <div class="card-body">
+              <h6>gyecier</h6>
+              <p>Best quality geycier</p>
+                 <a class="btn btn-sm btn-primary w-50" href="productdetailed.html?productId=gycier">Details</a>  
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 my-2">
+          <div class="card  border-3 shadow-sm">
+            <img src="assets/images/gey2.webp" class="card-img-top">
+            <div class="card-body">
+              <h6>geycier</h6>
+              <p>Best quality gyecier</p>
+              <a class="btn btn-sm btn-primary w-50" href="productdetailed.html?productId=gycier2">Details</a>  
+            </div> 
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- section about us -->
+    <section class="my-5">
+      <h1 class="text-center">About Us</h1>
+      <p class="text-center">Harvel is our one of the best website in the Pakistan.You freely trust our website</p>
+      <div class="row">
+        <div class="col-12 col-md-6 text-center">
+          <img src="assets/images/home-about-us.avif" class=" img-fluid rounded"  alt="">
+        </div>
+        <div class="col-12 col-md-6">
+          <p class="mb-2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam exercitationem, ex vero voluptas nobis
+            aliquid
+            necessitatibus sequi fugit, explicabo hic iure rerum officia illo molestiae placeat odit. Omnis, ipsam
+            veritatis.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam exercitationem, ex vero voluptas nobis
+            aliquid
+            necessitatibus sequi fugit, explicabo hic iure rerum officia illo molestiae placeat odit. Omnis, ipsam
+            veritatis.
+          </p>
+          <p class="mb-2">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam exercitationem, ex vero voluptas nobis
+            aliquid
+            necessitatibus sequi fugit, explicabo hic iure rerum officia illo molestiae placeat odit. Omnis, ipsam
+            veritatis.
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam exercitationem, ex vero voluptas nobis
+            aliquid
+            necessitatibus sequi fugit, explicabo hic iure rerum officia illo molestiae placeat odit. Omnis, ipsam
+            veritatis.
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam exercitationem, ex vero voluptas nobis
+            aliquid
+            necessitatibus sequi fugit, explicabo hic iure rerum officia illo molestiae placeat odit. Omnis, ipsam
+            veritatis.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <footer class="bg-primary py-4">
+    <div class="row mx-0">
+      <div class="col-md-4">
+        <div>
+          <a class="rounded" href="index.html">
+            <img src="assets/images/uniquelogo.png" width="155px">
+          </a>
+          <h1 class="text-secondary">Harvel Electronics</h1>
+          <p class="text-secondary">Harvel is our one of the best website in the Pakistan.You freely trust our website</p>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <div>
+          <h4 class="text-secondary">Navigation</h4>
+          <a class="nav-link fs-5 text-secondary" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link fs-5 text-secondary" href="About.html">About</a>
+          <a class="nav-link fs-5 text-secondary" href="Contact-us.html">Contact us</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div>
+          <h4 class="text-secondary">Categories</h4>
+          <a class="nav-link fs-5 text-secondary" href="Fans.html">Fans</a>
+          <a class="nav-link fs-5 text-secondary" href="Gyciers.html">Gyciers</a>
+          <a class="nav-link fs-5 text-secondary" href="Bulbs.html">Bulbs</a>
+          <a class="nav-link fs-5 text-secondary" href="Switches-buttons.html">Switches</a>
+        </div>
+      </div>
+      <div class="col-12">
+        <p class="text-center fs-4 text-secondary">
+          All right reserved by Harvel Electronics 2026 &copy;
+        </p>
+      </div>
+    </div>
+  </footer>
+  <!-- search work -->
+<script>
+  function handleSearch() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+
+  if (input.includes("fan")) {
+    window.location.href = "Fans.html";
+  } 
+  else if (input.includes("bulb")) {
+    window.location.href = "Bulbs.html";
+  } 
+  else if (input.includes("gycier") || input.includes("geyser")) {
+    window.location.href = "Gyciers.html";
+  } 
+  else if (input.includes("switch")) {
+    window.location.href = "Switches-buttons.html";
+  } 
+  else {
+    alert("Product not found");
+  }
+
+  return false; // page reload na ho
+}
+
+</script>
+
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="slider.js"></script>
+</body>
+
+</html>

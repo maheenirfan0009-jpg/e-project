@@ -1,0 +1,43 @@
+* {box-sizing:border-box}
+.navbar {
+  position: relative;
+  z-index: 1000;
+}🎨 
+#Mainslider .carousel-inner .carousel-item{
+  height: 70vh !important;
+}
+#Mainslider .carousel-inner .carousel-item img{
+  width: 100vw !important;
+  height: 70vh !important;
+  object-fit: cover !important;
+}
+/* navbar md pa icon white */
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+.navbar-toggler {
+  border: 1px solid white;
+}
+.card img{
+  height: 200px !important;
+}
+.carousel {
+  margin-top: 5px;
+}
+/*  all button hover */
+.btn {
+  transition: all 0.15s ease;
+}
+
+/* Hover pe neeche jaye */
+.btn:hover {
+  transform: translateY(4px);
+}
+/* Click pe aur zyada dab jaye */
+.btn:active {
+  transform: translateY(4px) scale(0.96);
+  box-shadow: 0 4px 6px rgba(20, 20, 20, 0.2);
+}
+body {
+  background: linear-gradient(to right, #bdc6cc, #ffffff);
+}

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Product Page</title>
+ <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.3/dist/flatly/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <style>
+    .product-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .price {
+      color: green;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      margin-left: 10px;
+    }
+
+    .qty-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .qty-box button {
+      width: 35px;
+      height: 35px;
+    }
+  </style>
+</head>
+
+<body onload="getProductId()">
+
+  <nav class="navbar navbar-expand-lg bg-primary fixed-top border-0" data-bs-theme="light">
+    <div class="container-fluid">
+      <a class="navbar-brand rounded " href="index.html">
+        <img src="assets/images/uniquelogo.png" width="155px">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse row mx-0" id="navbar">
+        <div class="col-lg-9 col-md-8">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="About.html">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Categories
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="Fans.html">Fans</a></li>
+                <li><a class="dropdown-item" href="Gyciers.html">Gyciers</a></li>
+                <li><a class="dropdown-item" href="Bulbs.html">Bulbs</a></li>
+                <li><a class="dropdown-item" href="Switches-buttons.html">Switches+buttons</a></li>
+
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="Contact-us.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-4">
+          <form class="d-flex">
+            <input class="form-control me-2 border-0" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-light " type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container py-5">
+
+    <!-- TOP SECTION -->
+    <div class="row">
+
+      <!-- IMAGE -->
+      <div class="col-md-5">
+
+        <img src="assets/images/fan.png" class="product-img border-3 shadow-sm" id="pic">
+      </div>
+
+      <!-- DETAILS -->
+      <div class="col-md-7">
+        <h3 id="name">fan</h3>
+        <p>⭐⭐⭐⭐☆ (120 reviews)</p>
+
+        <p class="price">
+          Rs. <span id="price">2,499</span> 
+          <span class="old-price" id="oldprice">Rs. 3,000</span>
+        </p>
+
+        <!-- QUANTITY -->
+        <div class="qty-box">
+          <button class="btn btn-outline-dark" onclick="decrease()">-</button>
+          <input type="text" id="qty" value="1" class="form-control w-25 text-center">
+          <button class="btn btn-outline-dark" onclick="increase()">+</button>
+        </div>
+
+        <!-- BUTTON -->
+        <button class="btn btn-primary mt-3">Add to Cart</button>
+<a id="downloadBtn" class="btn btn-primary mt-3 ms-2" download>
+  Download
+</a>
+      </div>
+
+    </div>
+
+    <!-- TABS -->
+    <div class="mt-5 w-100 w-md-75 mx-auto">
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <button class="nav-link active text-white bg-dark me-1" onclick="showTab('desc')">Description</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link text-white bg-dark me-1" onclick="showTab('specs')">Specs</button>
+        </li>
+        <li class="nav-item">
+          <button class="nav-link text-white bg-dark " onclick="showTab('reviews')">Reviews</button>
+        </li>
+      </ul>
+
+      <div class="border p-3 mt-2 w-50 border-3 shadow">
+        <div id="desc">
+          <p id="inner-desc">Yeh ek high quality product hai. Comfortable aur stylish.</p>
+        </div>
+
+        <div id="specs" style="display:none;">
+          <p>Brand: <span id="brand">XYZ</span> </p>
+          <p>Material: <span id="material">Metal</span> </p>
+          <p>Color: <span id="color">Brwon</span> </p>
+        </div>
+
+        <div id="reviews" style="display:none;">
+          <p >⭐⭐⭐⭐⭐ - Bohat acha product!</p>
+          <p>⭐⭐⭐ - Theek tha</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer class="bg-primary py-4">
+    <div class="row mx-0">
+      <div class="col-md-4">
+        <div>
+          <a class="rounded" href="index.html">
+            <img src="assets/images/uniquelogo.png" width="155px">
+          </a>
+          <h1 class="text-secondary">Harvel Electronics</h1>
+          <p class="text-secondary">Harvel is our one of the best website in the Pakistan.You freely trust our website</p>
+        </div>
+      </div>
+      <div class="col-md-2"></div>
+      <div class="col-md-3">
+        <div>
+          <h4 class="text-secondary">Navigation</h4>
+          <a class="nav-link fs-5 text-secondary" aria-current="page" href="index.html">Home</a>
+          <a class="nav-link fs-5 text-secondary" href="About.html">About</a>
+          <a class="nav-link fs-5 text-secondary" href="Contact-us.html">Contact us</a>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div>
+          <h4 class="text-secondary">Categories</h4>
+          <a class="nav-link fs-5 text-secondary" href="Fans.html">Fans</a>
+          <a class="nav-link fs-5 text-secondary" href="Gyciers.html">Gyciers</a>
+          <a class="nav-link fs-5 text-secondary" href="Bulbs.html">Bulbs</a>
+          <a class="nav-link fs-5 text-secondary" href="Switches-buttons.html">Switches</a>
+        </div>
+      </div>
+      <div class="col-12">
+        <p class="text-center fs-4 text-secondary">
+          All right reserved by Harvel Electronics 2026 &copy;
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT -->
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/ProductDetails.js"></script>
+  <script>
+    function increase() {
+      let qty = document.getElementById("qty");
+      qty.value = parseInt(qty.value) + 1;
+    }
+
+    function decrease() {
+      let qty = document.getElementById("qty");
+      if (qty.value > 1) {
+        qty.value = parseInt(qty.value) - 1;
+      }
+    }
+
+    function showTab(tab) {
+      document.getElementById('desc').style.display = 'none';
+      document.getElementById('specs').style.display = 'none';
+      document.getElementById('reviews').style.display = 'none';
+
+      document.getElementById(tab).style.display = 'block';
+
+      // active tab color change
+      document.querySelectorAll('.nav-link').forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+    }
+
+      function getProductId() {
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get("productId");
+        console.log(productId);
+        showProduct(productId);
+      }
+      function showProduct(Fan) {
+        const p = products[Fan];
+        console.log(p);
+        document.getElementById('name').innerText = p.name;
+        document.getElementById('brand').innerText = "Brand: " + p.brand;
+        document.getElementById('material').innerText = "Material: " + p.material;
+        document.getElementById('color').innerText = "Color: " + p.color;
+        document.getElementById('price').innerText = p.price;
+        document.getElementById('oldprice').innerText =  p.price + 500;
+        document.getElementById('pic').src = p.pic;
+        document.getElementById('inner-desc').innerText = p.desc;
+        //document.getElementById('product-detail').style.display = 'block';
+      document.getElementById("downloadBtn").href = p.file;
+      }
+  </script>
+
+</body>
+
+</html>
